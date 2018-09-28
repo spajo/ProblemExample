@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Group?>
+<?import java.lang.Double?>
+<fx:root type="sample.RowView" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         minHeight="15.0" prefHeight="30.0" maxHeight="35.0" prefWidth="220.0" maxWidth="$MAX_VALUE">
+
+    <fx:define>
+        <Double fx:id="MAX_VALUE" fx:constant="MAX_VALUE"/>
+    </fx:define>
+
+    <graphic>
+        <Group>
+            <Label fx:id="boardLabel" minWidth="0.0" minHeight="0.0" text="${rowName}"/>
+        </Group>
+    </graphic>
+
+</fx:root>

@@ -1,0 +1,28 @@
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.layout.VBox?>
+<?import sample.MyCustomView?>
+<?import sample.RowView?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml"
+      stylesheets="@custom.css">
+
+    <!--GridLines and css don't work here-->
+    <MyCustomView styleClass="grid" prefHeight="240.0" rotate="-90" alignment="CENTER"
+                  fx:factory="createMyCustomView"/>
+    <!--GridLines and css don't work here-->
+    <MyCustomView styleClass="grid" prefHeight="240.0" rotate="-90" alignment="CENTER"
+                  gridLinesVisible="true">
+        <rows>
+            <FXCollections fx:factory="observableArrayList">
+                <RowView row="1" rowName="test"/>
+                <RowView row="2" rowName="test"/>
+                <RowView row="3" rowName="test"/>
+                <RowView row="4" rowName="test"/>
+                <RowView row="5" rowName="test"/>
+            </FXCollections>
+        </rows>
+    </MyCustomView>
+
+    <!--This works-->
+    <MyCustomView prefHeight="240.0" rotate="-90" alignment="CENTER"/>
+</VBox>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import sample.RowView?>
+<fx:root type="sample.MyCustomView" xmlns="http://javafx.com/javafx/8"
+         xmlns:fx="http://javafx.com/fxml/1" maxWidth="400.0" prefWidth="250.0"
+         stylesheets="@custom.css" styleClass="grid" gridLinesVisible="true">
+    <rows>
+        <!--If using views defined inside the view gridlines and css work-->
+        <FXCollections fx:factory="observableArrayList">
+            <RowView row="1"/>
+            <RowView row="2"/>
+            <RowView row="3"/>
+            <RowView row="4"/>
+            <RowView row="5"/>
+            <RowView row="6"/>
+            <RowView row="7"/>
+            <RowView row="8"/>
+        </FXCollections>
+    </rows>
+</fx:root>
